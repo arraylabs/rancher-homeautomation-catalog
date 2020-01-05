@@ -6,8 +6,20 @@ version: '2'
     Track and control all devices at home and automate control.
   version: Latest Stable
   questions:
+   - variable: 'CONFIG_DIR'
+     description: 'Location of the persistant data storage'
+     label: 'Config Directory'
+     required: true
+     type: 'string'
+     default: '/home/rancher/docker/homeassistant'
+   - variable: 'CUSTOM_COMPONENTS_DIR'
+     description: 'Location of the custom components folder'
+     label: 'Custom Components Directory'
+     required: true
+     type: 'string'
+     default: '/home/rancher/docker/homeassistant/custom_components'
    - variable: 'TZ'
-     description: 'Timezone (eg. Europe/Amsterdam)'
+     description: 'Timezone (eg. America/New_York)'
      label: 'Timezone'
      required: true
      type: 'string'
