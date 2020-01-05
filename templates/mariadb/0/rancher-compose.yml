@@ -1,0 +1,31 @@
+version: '2'
+
+.catalog:
+  name: MariaDB
+  description: |
+    An Enhanced drop in replacement for Mysql.
+  version: Latest Stable
+  questions:
+   - variable: 'CONFIG_DIR'
+     description: 'Location of the persistant data storage'
+     label: 'Config Directory'
+     required: true
+     type: 'string'
+     default: '/home/rancher/docker/mariadb'
+   - variable: 'DB_PORT'
+     description: 'DB Port'
+     label: 'DB Port'
+     required: true
+     type: 'string'
+     default: '3306'
+   - variable: 'MYSQL_ROOT_PASSWORD'
+     description: 'Default root password'
+     label: 'DB Port'
+     required: true
+     type: 'string'
+   - variable: 'TZ'
+     description: 'Timezone (eg. America/New_York)'
+     label: 'Timezone'
+     required: true
+     type: 'string'
+     default: 'America/New_York'
