@@ -1,0 +1,43 @@
+version: '2'
+
+.catalog:
+  name: deConz
+  description: |
+    This Docker image containerizes the deCONZ software from Dresden Elektronik, which controls a ZigBee network using a Conbee USB or RaspBee GPIO serial interface.
+  version: Latest Stable
+  questions:
+   - variable: 'CONFIG_DIR'
+     description: 'Location of the persistant data storage'
+     label: 'Config Directory'
+     required: true
+     type: 'string'
+     default: '/home/rancher/docker/deconz'
+   - variable: 'DECONZ_WEB_PORT'
+     description: 'Web Interface Port'
+     label: 'Web Interface Port'
+     required: true
+     type: 'string'
+     default: '8080'
+   - variable: 'DECONZ_WS_PORT'
+     description: 'Web Service Port'
+     label: 'Web Service Port'
+     required: true
+     type: 'string'
+     default: '8443'
+   - variable: 'DECONZ_UPNP'
+     description: 'Disable UPNP'
+     label: 'Disable UPNP'
+     required: true
+     type: 'boolean'
+     default: true
+   - variable: 'TZ'
+     description: 'Timezone (eg. America/New_York)'
+     label: 'Timezone'
+     required: true
+     type: 'string'
+     default: 'America/New_York'
+   - variable: 'DEV_ZIGBEE'
+     description: 'Device (/dev/...), leave empty for no Zigbee device'
+     label: 'Zigbee device'
+     required: false
+     type: 'string'
