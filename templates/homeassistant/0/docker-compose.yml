@@ -19,5 +19,4 @@ services:
     {{- end }}
     restart: always
     network_mode: host
-    UID: 1100
-    GID: 1100
+    user: 1100:1100
