@@ -43,11 +43,11 @@ version: '2'
      type: 'string'
      default: 'changeme'
    - variable: 'DECONZ_UPNP'
-     description: 'Disable UPNP'
-     label: 'Disable UPNP'
+     description: 'Enable/disable UPNP. 0=disable, 1=enable'
+     label: 'Enable UPNP'
      required: true
-     type: 'boolean'
-     default: true
+     type: 'string'
+     default: '0"
    - variable: 'TZ'
      description: 'Timezone (eg. America/New_York)'
      label: 'Timezone'
