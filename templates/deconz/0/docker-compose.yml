@@ -12,7 +12,7 @@ services:
       TZ: ${TZ}
       DECONZ_UPNP: ${DECONZ_UPNP}
       DECONZ_DEVICE: ${DECONZ_DEVICE}
-    {{- if (.Values.DEV_ZWAVE) }}
+    {{- if (.Values.DEV_ZIGBEE) }}
     devices:
       {{- if (.Values.DEV_ZIGBEE) }}
       - ${DEV_ZIGBEE}:/dev/ttyACM0:rwm
