@@ -9,6 +9,6 @@ services:
       - ${NODE_WEB_PORT}:1880
     environment:
       TZ: ${TZ}
-    restart: always
+    restart: unless-stopped
     network_mode: host
     user: 1100:1100
