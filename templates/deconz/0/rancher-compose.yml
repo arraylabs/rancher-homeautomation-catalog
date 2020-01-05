@@ -35,7 +35,7 @@ version: '2'
      label: 'VNC Port'
      required: false
      type: 'string'
-     default: '8443'
+     default: '5900'
    - variable: 'DECONZ_VNC_PASSWORD'
      description: 'VNC password'
      label: 'VNC Password'
