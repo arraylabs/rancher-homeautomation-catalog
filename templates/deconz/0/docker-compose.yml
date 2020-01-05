@@ -5,13 +5,15 @@ services:
     image: marthoc/deconz:latest
     volumes:
       - ${CONFIG_DIR}:/root/.local/share/dresden-elektronik/deCONZ
-    ports:
-      - ${DECONZ_WEB_PORT}:8080
-      - ${DECONZ_WS_PORT}:8443
     environment:
       TZ: ${TZ}
       DECONZ_UPNP: ${DECONZ_UPNP}
       DECONZ_DEVICE: ${DEV_ZIGBEE}
+      DECONZ_WEB_PORT: ${DECONZ_WEB_PORT}
+      DECONZ_WS_PORT: ${DECONZ_WS_PORT}
+      DECONZ_VNC_MODE: ${DECONZ_VNC_MODE}
+      DECONZ_VNC_PORT: ${DECONZ_VNC_PORT}
+      DECONZ_VNC_PASSWORD: ${DECONZ_VNC_PASSWORD}
     {{- if (.Values.DEV_ZIGBEE) }}
     devices:
       {{- if (.Values.DEV_ZIGBEE) }}
