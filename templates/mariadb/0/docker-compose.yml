@@ -1,0 +1,14 @@
+version: '2'
+services:
+  mariadb:
+    container_name: MariaDB
+    image: linuxserver/mariadb:latest
+    volumes:
+      - ${CONFIG_DIR}:/config
+    ports:
+      - ${DB_PORT}:3306
+    environment:
+      TZ: ${TZ}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    restart: always
+    user: 1100:1100
