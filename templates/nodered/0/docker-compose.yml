@@ -1,0 +1,14 @@
+version: '2'
+services:
+  nodered:
+    container_name: Node-Red
+    image: nodered/node-red:latest
+    volumes:
+      - ${CONFIG_DIR}:/data
+    ports:
+      - ${DECONZ_WEB_PORT}:1880
+    environment:
+      TZ: ${TZ}
+    restart: always
+    network_mode: host
+    user: 1100:1100
