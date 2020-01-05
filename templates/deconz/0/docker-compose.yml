@@ -1,7 +1,7 @@
 version: '2'
 services:
   homeassistant:
-    container_name: deConz
+    container_name: deCONZ
     image: marthoc/deconz:latest
     volumes:
       - ${CONFIG_DIR}:/root/.local/share/dresden-elektronik/deCONZ
