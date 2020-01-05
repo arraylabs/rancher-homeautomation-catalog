@@ -6,7 +6,7 @@ services:
     volumes:
       - /var/lib/docker/volumes/homeassistant:/config
     environment:
-      - TZ: ${TZ}
+      TZ: ${TZ}
     {{- if or (.Values.DEV_ZWAVE) (.Values.DEV_RFXCOM) }}
     devices:
       {{- if (.Values.DEV_ZWAVE) }}
