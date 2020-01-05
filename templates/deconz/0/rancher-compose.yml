@@ -24,6 +24,24 @@ version: '2'
      required: true
      type: 'string'
      default: '8443'
+   - variable: 'DECONZ_VNC_MODE'
+     description: 'Enable/disable VNC mode. Allows view of mesh'
+     label: 'Enable VNC'
+     required: true
+     type: 'boolean'
+     default: false
+   - variable: 'DECONZ_VNC_PORT'
+     description: 'Set the port for VNC support'
+     label: 'VNC Port'
+     required: false
+     type: 'string'
+     default: '8443'
+   - variable: 'DECONZ_VNC_PASSWORD'
+     description: 'VNC password'
+     label: 'VNC Password'
+     required: false
+     type: 'string'
+     default: 'changeme'
    - variable: 'DECONZ_UPNP'
      description: 'Disable UPNP'
      label: 'Disable UPNP'
