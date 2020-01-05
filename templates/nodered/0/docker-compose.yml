@@ -6,7 +6,7 @@ services:
     volumes:
       - ${CONFIG_DIR}:/data
     ports:
-      - ${DECONZ_WEB_PORT}:1880
+      - ${NODE_WEB_PORT}:1880
     environment:
       TZ: ${TZ}
     restart: always
