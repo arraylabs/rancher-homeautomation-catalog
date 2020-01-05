@@ -1,0 +1,5 @@
+name: Node-RED
+description: |
+  Node-RED is a flow-based development tool for visual programming developed for wiring together hardware devices, APIs and online services.
+version: Latest Stable
+category: Automation
