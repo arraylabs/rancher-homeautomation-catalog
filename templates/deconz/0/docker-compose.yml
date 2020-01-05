@@ -1,0 +1,23 @@
+version: '2'
+services:
+  homeassistant:
+    container_name: deConz
+    image: marthoc/deconz:latest
+    volumes:
+      - ${CONFIG_DIR}:/root/.local/share/dresden-elektronik/deCONZ
+    ports:
+      - ${DECONZ_WEB_PORT}:8080
+      - ${DECONZ_WS_PORT}:8443
+    environment:
+      TZ: ${TZ}
+      DECONZ_UPNP: ${DECONZ_UPNP}
+      DECONZ_DEVICE: ${DECONZ_DEVICE}
+    {{- if (.Values.DEV_ZWAVE) }}
+    devices:
+      {{- if (.Values.DEV_ZIGBEE) }}
+      - ${DEV_ZIGBEE}:/dev/ttyACM0:rwm
+      {{- end }}
+    {{- end }}
+    restart: always
+    network_mode: host
+    user: 1100:1100
