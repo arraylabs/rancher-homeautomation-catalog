@@ -11,7 +11,7 @@ services:
     environment:
       TZ: ${TZ}
       DECONZ_UPNP: ${DECONZ_UPNP}
-      DECONZ_DEVICE: ${DECONZ_DEVICE}
+      DECONZ_DEVICE: ${DEV_ZIGBEE}
     {{- if (.Values.DEV_ZIGBEE) }}
     devices:
       {{- if (.Values.DEV_ZIGBEE) }}
