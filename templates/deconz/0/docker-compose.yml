@@ -20,6 +20,6 @@ services:
       - ${DEV_ZIGBEE}:/dev/ttyACM0:rwm
       {{- end }}
     {{- end }}
-    restart: always
+    restart: unless-stopped
     network_mode: host
     user: 1100:1100
