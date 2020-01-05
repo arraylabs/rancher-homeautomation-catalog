@@ -1,0 +1,5 @@
+name: deConz
+description: |
+  This Docker image containerizes the deCONZ software from Dresden Elektronik, which controls a ZigBee network using a Conbee USB or RaspBee GPIO serial interface.
+version: Latest Stable
+category: Automation
