@@ -1,0 +1,19 @@
+version: '3'
+
+.catalog:
+  name: Home Assistant
+  description: |
+    Track and control all devices at home and automate control.
+  version: Latest Stable
+  questions:
+   - variable: 'TZ'
+     description: 'Timezone (eg. Europe/Amsterdam)'
+     label: 'Timezone'
+     required: true
+     type: 'string'
+     default: 'America/New_York'
+   - variable: 'DEV_ZWAVE'
+     description: 'Device (/dev/...), leave empty for no ZWave device'
+     label: 'ZWave device'
+     required: false
+     type: 'string'
