@@ -13,4 +13,3 @@ services:
       PUID: 1100
       PGID: 1100
     restart: unless-stopped
-    user: 1100:1100
