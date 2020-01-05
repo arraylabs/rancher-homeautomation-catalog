@@ -4,7 +4,8 @@ services:
     container_name: home-assistant
     image: homeassistant/home-assistant:stable
     volumes:
-      - /var/lib/docker/volumes/homeassistant:/config
+      - ${CONFIG_DIR}:/config
+      - ${CUSTOM_COMPONENTS_DIR}:/config/custom_components
     environment:
       TZ: ${TZ}
     {{- if or (.Values.DEV_ZWAVE) (.Values.DEV_RFXCOM) }}
