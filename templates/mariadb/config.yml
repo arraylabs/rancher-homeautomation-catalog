@@ -1,0 +1,5 @@
+name: MariaDB
+description: |
+  An Enhanced drop in replacement for Mysql.
+version: Latest Stable
+category: Automation
