@@ -1,6 +1,6 @@
 version: '2'
 services:
-  homeassistant:
+  deconz:
     container_name: deCONZ
     image: marthoc/deconz:latest
     volumes:
