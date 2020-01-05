@@ -1,0 +1,20 @@
+version: '3'
+services:
+  homeassistant:
+    container_name: home-assistant
+    image: homeassistant/home-assistant:stable
+    volumes:
+      - /var/lib/docker/volumes/homeassistant:/config
+    environment:
+      - TZ: ${TZ}
+    {{- if or (.Values.DEV_ZWAVE) (.Values.DEV_RFXCOM) }}
+    devices:
+      {{- if (.Values.DEV_ZWAVE) }}
+      - ${DEV_ZWAVE}:/zwaveusb:rwm
+      {{- end }}
+      {{- if (.Values.DEV_RFXCOM) }}
+      - ${DEV_RFXCOM}:/rfxtrxusb:rwm
+      {{- end }}
+    {{- end }}
+    restart: always
+    network_mode: host
