@@ -20,7 +20,7 @@ version: '2'
      default: '3306'
    - variable: 'MYSQL_ROOT_PASSWORD'
      description: 'Default root password'
-     label: 'DB Port'
+     label: 'Root Password'
      required: true
      type: 'string'
    - variable: 'TZ'
