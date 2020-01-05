@@ -8,7 +8,7 @@ services:
     environment:
       TZ: ${TZ}
       DECONZ_UPNP: ${DECONZ_UPNP}
-      DECONZ_DEVICE: '/dev/ttyACM0'
+      DECONZ_DEVICE: /dev/ttyACM0
       DECONZ_WEB_PORT: ${DECONZ_WEB_PORT}
       DECONZ_WS_PORT: ${DECONZ_WS_PORT}
       DECONZ_VNC_MODE: ${DECONZ_VNC_MODE}
