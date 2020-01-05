@@ -1,0 +1,26 @@
+version: '2'
+
+.catalog:
+  name: Node-RED
+  description: |
+    Node-RED is a flow-based development tool for visual programming developed for wiring together hardware devices, APIs and online services.
+  version: Latest Stable
+  questions:
+   - variable: 'CONFIG_DIR'
+     description: 'Location of the persistant data storage'
+     label: 'Config Directory'
+     required: true
+     type: 'string'
+     default: '/home/rancher/docker/nodered'
+   - variable: 'NODE_WEB_PORT'
+     description: 'Web Interface Port'
+     label: 'Web Interface Port'
+     required: true
+     type: 'string'
+     default: '1880'
+   - variable: 'TZ'
+     description: 'Timezone (eg. America/New_York)'
+     label: 'Timezone'
+     required: true
+     type: 'string'
+     default: 'America/New_York'
