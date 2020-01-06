@@ -16,4 +16,3 @@ services:
     {{- end }}
     restart: unless-stopped
     network_mode: host
-    user: 1100:1100
