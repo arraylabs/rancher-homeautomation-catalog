@@ -59,3 +59,4 @@ version: '2'
      label: 'ZigBee device'
      required: false
      type: 'string'
+     default: '/dev/serial/by-id/usb-dresden_elektronik_ingenieurtechnik_GmbH_ConBee_II_DE2123851-if00'
