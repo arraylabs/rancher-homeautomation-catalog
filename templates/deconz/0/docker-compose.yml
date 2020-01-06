@@ -5,9 +5,6 @@ services:
     image: marthoc/deconz:latest
     volumes:
       - ${CONFIG_DIR}:/root/.local/share/dresden-elektronik/deCONZ
-    ports:
-      - ${DECONZ_WEB_PORT}:80
-      - ${DECONZ_WS_PORT}:443
     environment:
       TZ: ${TZ}
       DECONZ_UPNP: ${DECONZ_UPNP}
@@ -24,3 +21,4 @@ services:
       {{- end }}
     {{- end }}
     restart: unless-stopped
+    network_mode: host
